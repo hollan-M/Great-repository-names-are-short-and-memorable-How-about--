@@ -1,1 +1,30 @@
+@keyframes dog {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+        transform: rotateY(90deg)
+    }
+    50% {
+        transform: rotateX(180deg) rotateY(-180deg);
+    }
+    75% {
+        transform: rotateY(-235deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(-360deg);
+    }
+}
 
+.dog {
+    animation: dog 2s infinite;
+    right: 50%;
+    top: 50%;
+    position: absolute;
+}
+
+.text {
+    position: absolute;
+    right: 50%;
+    top: 25%;
+}
