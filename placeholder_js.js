@@ -19,6 +19,7 @@ function getOffset(el) {
 //
 
 function oksigma() {
+    console.log("AAH?")
     let copy = text_id.cloneNode(true);
     trail_body.appendChild(copy);
     copy.style.animation = "thefade 1s linear lalalalala 5s linear";
@@ -33,5 +34,9 @@ function oksigma() {
     //     console.log("eaa?")
     // }, 5000)
 }
-
-setInterval(oksigma, 25);
+let time_to_wait = 0;
+for (let i = 0; i < 100; i++) {
+    time_to_wait += 25;
+    console.log(time_to_wait);
+    window.setTimeout(oksigma, time_to_wait);
+}
