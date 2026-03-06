@@ -18,19 +18,28 @@
 
 @keyframes lalalalala {
     0% {
-        transform: rotateY(0deg);
+        transform: rotateY(0deg) rotateX(0deg) rotate3d(5, -5, 0, 45deg);
     }
     25% {
-        transform: rotateY(90deg)
+        transform: rotateY(90deg) 
     }
     50% {
-        transform: rotateY(-180deg);
+        transform: rotateY(-180deg) rotateX(-360deg) rotate3d(0, 0, -5, 45deg);
     }
     75% {
         transform: rotateY(-235deg);
     }
     100% {
-        transform: rotateY(-360deg);
+        transform: rotateY(0deg) rotateX(0deg) rotate3d(5, -5, 0, 45deg);
+    }
+}
+
+@keyframes thefade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
@@ -42,8 +51,5 @@
 }
 
 .text {
-    /* position: absolute; */
     animation: lalalalala 5s infinite;
-    /* right: 50%; */
-    /* top: 25%; */
 }
