@@ -54,14 +54,15 @@ setInterval(() => {
   elapsed += dt * 0.15;
 
   text_id.style.color = `hsl(${elapsed} 50 50)`;
+
   for (let index = 0; index < words.length; index++) {
     
-    secondary_wait += 25;
-    let counter = secondary_wait;
-    window.setTimeout(()=>{
+    // secondary_wait += 25;
+    // let counter = secondary_wait;
+    // window.setTimeout(()=>{
       element = words[index];
-      element.style.color = `hsl(${elapsed} 50 50)`;
-    }, secondary_wait)
+      element.style.color = `hsl(${elapsed + index * 20} 50 50)`;
+    // }, secondary_wait)
   }
 
   // for _, v in words do v.style.color = `hsl(${elapsed} 100 50)` end
