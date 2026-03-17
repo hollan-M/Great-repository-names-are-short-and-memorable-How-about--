@@ -1,0 +1,18 @@
+@keyframes wowie {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translate(30px, 70px);
+    }
+    50% {
+        transform: translate(-30px, 110px)
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.cool {
+    animation: wowie 5s infinite;
+}
