@@ -61,3 +61,4 @@ create_text("BOXES!! Check this swag out oh my goodness!!", box_div, function (p
         _loop_2(index);
     }
 });
+console.log("init ye");
