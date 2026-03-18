@@ -1,4 +1,21 @@
-.box1 {
+#box1 {
     border: 2px solid red;
     border-radius: 25px;
+    width: 250px;
+    text-align: center;
+    right: 50%;
+    position: absolute;
+    height: 215px;
+}
+
+@keyframes boxtext1 {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
