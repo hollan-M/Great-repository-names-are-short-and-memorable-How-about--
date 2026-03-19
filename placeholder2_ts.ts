@@ -19,26 +19,36 @@ function create_text(text: string, parent: HTMLElement, callback: any) {
     }
 }
 
-let main_div = document.getElementById("maincontent");
+let main_div = document.createElement("div");
+body.appendChild(main_div);
+
 create_text("HI GUYS!", main_div, (parent: HTMLDivElement, text: HTMLAnchorElement[])=>{
     parent.style.position = "absolute";
-    parent.style.transform = "translate(45%, 0)"
+    parent.style.transform = "translate(930px, 0)"
+    parent.style.animationFillMode = "forwards";
+    parent.style.textAlign = "center";
+
     for (let index = 0; index < text.length; index++) {
         let element: HTMLAnchorElement = text[index];
-        element.style.fontSize = "50px";
+        element.style.fontSize = "150px";
         element.style.opacity = "0";
+        element.style.transform = "translate(45%, 0)"
+        element.style.animationFillMode = "forward";
     }
+    
     let inc_wait = 0;
+    
     for (let index = 0; index < text.length; index++) {
         inc_wait += 25;
         let element: HTMLAnchorElement = text[index];
         window.setTimeout(()=>{
+            element.style.animationFillMode = "forward";
             element.style.animation = "popin 1s cubic-bezier(0.45, 0, 0.55, 1) 1"
         }, inc_wait)
     }
 })
 
-let quote_div = document.getElementById("quotes");
+let quote_div: any = document.getElementById("quotes");
 
 create_text("QUOTES!! Rene descartes or something like that", quote_div, (parent: HTMLDivElement, text: HTMLAnchorElement[])=>{ // returns in the callbcak, I KNOW I can use `return`s but I like how I set this up, bite me
     parent.style.display = "flex";
@@ -123,7 +133,7 @@ function create_drift_element() {
     created_drifter.style.setProperty("animation-duration", `${animDuration}s`);
     // 
     created_drifter.style.setProperty("font-size", random_int(5, 15) + "px");
-    created_drifter.addEventListener("animationend", (element) => { // LIIITERALLY .target on the element RETURNS THE ELEMENT WHY CAN I NOT FUCKING REMOVE IT
+    created_drifter.addEventListener("animationend", (element: any) => { // LIIITERALLY .target on the element RETURNS THE ELEMENT WHY CAN I NOT FUCKING REMOVE IT
         // console.log(element.target);
         element.target.remove(); // when animation ends, remove
     })

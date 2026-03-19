@@ -17,20 +17,26 @@ function create_text(text, parent, callback) {
         callback(parent_div, text_array);
     }
 }
-var main_div = document.getElementById("maincontent");
+var main_div = document.createElement("div");
+body.appendChild(main_div);
 create_text("HI GUYS!", main_div, function (parent, text) {
     parent.style.position = "absolute";
-    parent.style.transform = "translate(45%, 0)";
+    parent.style.transform = "translate(930px, 0)";
+    parent.style.animationFillMode = "forwards";
+    parent.style.textAlign = "center";
     for (var index = 0; index < text.length; index++) {
         var element = text[index];
-        element.style.fontSize = "50px";
+        element.style.fontSize = "150px";
         element.style.opacity = "0";
+        element.style.transform = "translate(45%, 0)";
+        element.style.animationFillMode = "forward";
     }
     var inc_wait = 0;
     var _loop_1 = function (index) {
         inc_wait += 25;
         var element = text[index];
         window.setTimeout(function () {
+            element.style.animationFillMode = "forward";
             element.style.animation = "popin 1s cubic-bezier(0.45, 0, 0.55, 1) 1";
         }, inc_wait);
     };
