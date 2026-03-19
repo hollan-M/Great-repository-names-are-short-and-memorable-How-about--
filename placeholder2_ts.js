@@ -17,40 +17,45 @@ function create_text(text, parent, callback) {
         callback(parent_div, text_array);
     }
 }
-var quote_div = document.createElement("div");
-body.appendChild(quote_div);
-create_text("QUOTES!! Rene descartes or something like that", quote_div, function (parent, text) {
-    parent.style.display = "flex";
-    parent.style.alignItems = "center";
+var main_div = document.getElementById("maincontent");
+create_text("HI GUYS!", main_div, function (parent, text) {
     parent.style.position = "absolute";
-    parent.style.left = "5%";
+    parent.style.transform = "translate(45%, 0)";
+    for (var index = 0; index < text.length; index++) {
+        var element = text[index];
+        element.style.fontSize = "50px";
+        element.style.opacity = "0";
+    }
     var inc_wait = 0;
     var _loop_1 = function (index) {
         inc_wait += 25;
         var element = text[index];
         window.setTimeout(function () {
-            element.style.position = "relative";
-            element.style.animation = "wowie 5s cubic-bezier(0.45, 0, 0.55, 1) infinite";
-            console.log(text[index]);
+            element.style.animation = "popin 1s cubic-bezier(0.45, 0, 0.55, 1) 1";
         }, inc_wait);
     };
     for (var index = 0; index < text.length; index++) {
         _loop_1(index);
     }
 });
-var box_div = document.createElement("div");
-body.appendChild(box_div);
-create_text("BOXES!! Check this swag out oh my goodness!!", box_div, function (parent, text) {
+var quote_div = document.getElementById("quotes");
+create_text("QUOTES!! Rene descartes or something like that", quote_div, function (parent, text) {
     parent.style.display = "flex";
     parent.style.alignItems = "center";
     parent.style.position = "absolute";
-    parent.style.left = "5%";
-    parent.style.top = "25%";
+    parent.style.transform = "translate(875px, 195px)";
+    parent.style.border = "5px solid black";
+    parent.style.borderRadius = "25px";
+    parent.style.height = "75px";
+    parent.style.width = "350px";
+    parent.style.justifyContent = "center";
+    parent.style.boxShadow = "black 0px 10px 15px";
     var inc_wait = 0;
     var _loop_2 = function (index) {
         inc_wait += 25;
         var element = text[index];
-        element.href = "https://hollan-m.github.io/Great-repository-names-are-short-and-memorable-How-about--/boxes/boxes.html";
+        element.style.boxShadow = "black 0px 10px 15px";
+        element.style.userSelect = "none";
         window.setTimeout(function () {
             element.style.position = "relative";
             element.style.animation = "wowie 5s cubic-bezier(0.45, 0, 0.55, 1) infinite";
@@ -61,4 +66,65 @@ create_text("BOXES!! Check this swag out oh my goodness!!", box_div, function (p
         _loop_2(index);
     }
 });
-console.log("init ye");
+var box_div = document.createElement("div");
+body.appendChild(box_div);
+create_text("BOXES!! Check this swag out oh my goodness!!", box_div, function (parent, text) {
+    parent.style.display = "flex";
+    parent.style.alignItems = "center";
+    parent.style.position = "absolute";
+    parent.style.left = "5%";
+    parent.style.top = "75%";
+    var inc_wait = 0;
+    var _loop_3 = function (index) {
+        inc_wait += 25;
+        var element = text[index];
+        element.href = "https://hollan-m.github.io/Great-repository-names-are-short-and-memorable-How-about--/boxes/boxes.html";
+        window.setTimeout(function () {
+            element.style.position = "relative";
+            element.style.animation = "wowie 5s cubic-bezier(0.45, 0, 0.55, 1) infinite";
+            console.log(text[index]);
+        }, inc_wait);
+    };
+    for (var index = 0; index < text.length; index++) {
+        _loop_3(index);
+    }
+});
+// LOL I stole from my own website but thats ok 
+// begin functions for the bg
+function get_random_coords() {
+    var in_width = window.innerWidth;
+    var in_height = window.innerHeight;
+    return { x: Math.random() * in_width, y: Math.random() * in_height };
+}
+function random_int(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+} // this is stolen tbh but its used globally so ill keep it for now
+var drift_container = document.getElementById("drift_container");
+var animDuration = 5;
+function create_drift_element() {
+    var start = get_random_coords();
+    var end = get_random_coords();
+    var created_drifter = document.createElement("p"); // element of drift
+    // created_drifter.innerHTML = "▉"; /// sets character
+    created_drifter.style.border = "10px solid black";
+    created_drifter.style.borderRadius = "15px";
+    created_drifter.classList.add("drifter"); // gives the drift element its respective class
+    // set start and end coords
+    created_drifter.style.setProperty("--start-x", "".concat(start.x, "px"));
+    created_drifter.style.setProperty("--start-y", "".concat(start.y, "px"));
+    created_drifter.style.setProperty("--end-x", "".concat(end.x, "px"));
+    created_drifter.style.setProperty("--end-y", "".concat(end.y, "px"));
+    created_drifter.style.setProperty("animation-duration", "".concat(animDuration, "s"));
+    // 
+    created_drifter.style.setProperty("font-size", random_int(5, 15) + "px");
+    created_drifter.addEventListener("animationend", function (element) {
+        // console.log(element.target);
+        element.target.remove(); // when animation ends, remove
+    });
+    drift_container.appendChild(created_drifter);
+}
+setInterval(create_drift_element, 100); // will run this function once every X milliseconds, meaning it'll create a new drifter every X milliseconds
+// 
+console.log("init ye wow");
