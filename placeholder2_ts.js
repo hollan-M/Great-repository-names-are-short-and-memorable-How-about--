@@ -1,4 +1,27 @@
-var body = document.getElementById("body");
+var distance_between_us = new Howl({
+    src: [distance_between_us],
+    autoplay: false,
+    loop: true,
+    volume: 0
+});
+// on startup, do..
+var trigger = document.getElementById("trigger");
+trigger.style.display = "flex";
+trigger.style.alignItems = "center";
+trigger.style.position = "absolute";
+trigger.style.transform = "translate(875px, 195px)";
+trigger.style.border = "5px solid black";
+trigger.style.borderRadius = "25px";
+trigger.style.height = "75px";
+trigger.style.width = "350px";
+trigger.style.justifyContent = "center";
+trigger.style.boxShadow = "black 0px 10px 15px";
+trigger.addEventListener("click", function (e) {
+    console.log(e);
+    console.log("startup site");
+});
+// 
+var body = document.getElementById("main");
 function create_text(text, parent, callback) {
     var parent_div = document.createElement("div");
     var text_array = [];
@@ -41,7 +64,6 @@ create_text("HI GUYS!! welcome to this trash site I put way too much effort into
         window.setTimeout(function () {
             element.style.animationFillMode = "forward";
             element.style.animation = "popin 1s cubic-bezier(0.45, 0, 0.55, 1) 1 forwards, float2 5s cubic-bezier(0.45, 0, 0.55, 1) infinite";
-            // element.style.animation = ""
         }, inc_wait);
     };
     for (var index = 0; index < text.length; index++) {
@@ -71,8 +93,7 @@ create_text("QUOTES!! Rene descartes or something like that", quote_div, functio
         element.style.userSelect = "none";
         window.setTimeout(function () {
             element.style.position = "relative";
-            element.style.animation = "wowie 5s cubic-bezier(0.45, 0, 0.55, 1) infinite";
-            console.log(text[index]);
+            element.style.animation = "float2 5s cubic-bezier(0.45, 0, 0.55, 1) infinite";
         }, inc_wait);
     };
     for (var index = 0; index < text.length; index++) {
@@ -82,20 +103,28 @@ create_text("QUOTES!! Rene descartes or something like that", quote_div, functio
 var box_div = document.createElement("div");
 body.appendChild(box_div);
 create_text("BOXES!! Check this swag out oh my goodness!!", box_div, function (parent, text) {
+    var div_parent = parent.parentElement;
     parent.style.display = "flex";
     parent.style.alignItems = "center";
     parent.style.position = "absolute";
-    parent.style.left = "5%";
-    parent.style.top = "75%";
+    parent.style.transform = "translate(875px, 295px)";
+    parent.style.border = "5px solid black";
+    parent.style.borderRadius = "25px";
+    parent.style.height = "75px";
+    parent.style.width = "350px";
+    parent.style.justifyContent = "center";
+    parent.style.boxShadow = "black 0px 10px 15px";
+    div_parent.id = "boxes_parent_div";
+    parent.id = "boxes_div";
     var inc_wait = 0;
     var _loop_3 = function (index) {
         inc_wait += 25;
         var element = text[index];
-        element.href = "https://hollan-m.github.io/Great-repository-names-are-short-and-memorable-How-about--/boxes/boxes.html";
+        element.style.boxShadow = "black 0px 10px 15px";
+        element.style.userSelect = "none";
         window.setTimeout(function () {
             element.style.position = "relative";
-            element.style.animation = "wowie 5s cubic-bezier(0.45, 0, 0.55, 1) infinite";
-            console.log(text[index]);
+            element.style.animation = "float2 3s cubic-bezier(0.83, 0, 0.17, 1) infinite";
         }, inc_wait);
     };
     for (var index = 0; index < text.length; index++) {
