@@ -19,25 +19,29 @@ function create_text(text, parent, callback) {
 }
 var main_div = document.createElement("div");
 body.appendChild(main_div);
-create_text("HI GUYS!", main_div, function (parent, text) {
+create_text("HI GUYS!! welcome to this trash site I put way too much effort into writing this mostly in typescript LOL", main_div, function (parent, text) {
     parent.style.position = "absolute";
-    parent.style.transform = "translate(930px, 0)";
+    parent.style.transform = "translate(50px, 0)";
     parent.style.animationFillMode = "forwards";
     parent.style.textAlign = "center";
+    parent.style.boxShadow = "black 0px 10px 15px";
+    parent.parentElement.id = "header_div";
     for (var index = 0; index < text.length; index++) {
         var element = text[index];
-        element.style.fontSize = "150px";
+        element.style.fontSize = "50px";
         element.style.opacity = "0";
         element.style.transform = "translate(45%, 0)";
         element.style.animationFillMode = "forward";
+        element.style.display = "inline-block";
     }
     var inc_wait = 0;
     var _loop_1 = function (index) {
-        inc_wait += 25;
+        inc_wait += 85;
         var element = text[index];
         window.setTimeout(function () {
             element.style.animationFillMode = "forward";
-            element.style.animation = "popin 1s cubic-bezier(0.45, 0, 0.55, 1) 1";
+            element.style.animation = "popin 1s cubic-bezier(0.45, 0, 0.55, 1) 1 forwards, float2 5s cubic-bezier(0.45, 0, 0.55, 1) infinite";
+            // element.style.animation = ""
         }, inc_wait);
     };
     for (var index = 0; index < text.length; index++) {
@@ -46,6 +50,7 @@ create_text("HI GUYS!", main_div, function (parent, text) {
 });
 var quote_div = document.getElementById("quotes");
 create_text("QUOTES!! Rene descartes or something like that", quote_div, function (parent, text) {
+    var div_parent = parent.parentElement;
     parent.style.display = "flex";
     parent.style.alignItems = "center";
     parent.style.position = "absolute";
@@ -56,6 +61,8 @@ create_text("QUOTES!! Rene descartes or something like that", quote_div, functio
     parent.style.width = "350px";
     parent.style.justifyContent = "center";
     parent.style.boxShadow = "black 0px 10px 15px";
+    div_parent.id = "quotes_parent_div";
+    parent.id = "quotes_div";
     var inc_wait = 0;
     var _loop_2 = function (index) {
         inc_wait += 25;
