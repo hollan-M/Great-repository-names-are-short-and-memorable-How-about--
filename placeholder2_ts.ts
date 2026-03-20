@@ -1,9 +1,11 @@
-var distance_between_us = new Howl({
-    src: [distance_between_us],
+var cobbersong = new Howl({
+    src: [cobbers],
     autoplay: false,
     loop: true,
-    volume: 0
+    volume: 10
 })
+
+let body = document.getElementById("main")!;
 
 // on startup, do..
 let trigger = document.getElementById("trigger")!;
@@ -19,13 +21,14 @@ trigger.style.justifyContent = "center";
 trigger.style.boxShadow = "black 0px 10px 15px";
 
 trigger.addEventListener("click", (e) => {
-    console.log(e);
-    console.log("startup site")
+    body.style.display = "unset";
+    trigger.style.display = "none";
+    body.style.opacity = "1";
+    cobbersong.play();
 })
 
 // 
 
-let body = document.getElementById("main")!;
 function create_text(text: string, parent: HTMLElement, callback: any) {
     let parent_div = document.createElement("div");
 

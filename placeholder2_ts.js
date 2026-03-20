@@ -1,9 +1,10 @@
-var distance_between_us = new Howl({
-    src: [distance_between_us],
+var cobbersong = new Howl({
+    src: [cobbers],
     autoplay: false,
     loop: true,
-    volume: 0
+    volume: 10
 });
+var body = document.getElementById("main");
 // on startup, do..
 var trigger = document.getElementById("trigger");
 trigger.style.display = "flex";
@@ -17,11 +18,12 @@ trigger.style.width = "350px";
 trigger.style.justifyContent = "center";
 trigger.style.boxShadow = "black 0px 10px 15px";
 trigger.addEventListener("click", function (e) {
-    console.log(e);
-    console.log("startup site");
+    body.style.display = "unset";
+    trigger.style.display = "none";
+    body.style.opacity = "1";
+    cobbersong.play();
 });
 // 
-var body = document.getElementById("main");
 function create_text(text, parent, callback) {
     var parent_div = document.createElement("div");
     var text_array = [];
