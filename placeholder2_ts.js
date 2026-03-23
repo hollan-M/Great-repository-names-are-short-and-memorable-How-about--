@@ -140,7 +140,7 @@ trigger.addEventListener("click", (e) => {
             console.log(window.location);
             if (window.location.href == "file:///Users/hollanm9/Documents/GitHub/Great-repository-names-are-short-and-memorable-How-about--/index.html") {
                 console.log("LOCAL CLICK, REDIRECTING...");
-                window.open("file:///Users/hollanm9/Documents/GitHub/Great-repository-names-are-short-and-memorable-How-about--/boxes/boxes.html", "_blank");
+                window.open("file:///Users/hollanm9/Documents/GitHub/Great-repository-names-are-short-and-memorable-How-about--/quotes/quotes.html", "_blank");
             }
             else {
                 console.log("SERVER CLICK");
