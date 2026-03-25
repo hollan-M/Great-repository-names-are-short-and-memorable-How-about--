@@ -171,7 +171,7 @@ trigger.addEventListener("click", (e) => {
                 window.open("file:///Users/hollanm9/Documents/GitHub/Great-repository-names-are-short-and-memorable-How-about--/quotes/quotes.html", "_blank")
             } else {
                 console.log("SERVER CLICK");
-                window.open("", "_blank");
+                window.open("https://hollan-m.github.io/Great-repository-names-are-short-and-memorable-How-about--/quotes/quotes.html", "_blank");
             }
         })
     }) 
@@ -212,7 +212,7 @@ trigger.addEventListener("click", (e) => {
                 window.open("file:///Users/hollanm9/Documents/GitHub/Great-repository-names-are-short-and-memorable-How-about--/boxes/boxes.html", "_blank")
             } else {
                 console.log("SERVER CLICK");
-                window.open("", "_blank");
+                window.open("https://hollan-m.github.io/Great-repository-names-are-short-and-memorable-How-about--/boxes/boxes.html", "_blank");
             }
         })
     })
