@@ -170,7 +170,8 @@ trigger.addEventListener("click", (e) => {
                 console.log("LOCAL CLICK, REDIRECTING...");
                 window.open("file:///Users/hollanm9/Documents/GitHub/Great-repository-names-are-short-and-memorable-How-about--/quotes/quotes.html", "_blank")
             } else {
-                console.log("SERVER CLICK")
+                console.log("SERVER CLICK");
+                window.open("", "_blank");
             }
         })
     }) 
@@ -210,12 +211,13 @@ trigger.addEventListener("click", (e) => {
                 console.log("LOCAL CLICK, REDIRECTING...");
                 window.open("file:///Users/hollanm9/Documents/GitHub/Great-repository-names-are-short-and-memorable-How-about--/boxes/boxes.html", "_blank")
             } else {
-                console.log("SERVER CLICK")
+                console.log("SERVER CLICK");
+                window.open("", "_blank");
             }
         })
     })
 
     setInterval(create_drift_element, 100); // will run this function once every X milliseconds, meaning it'll create a new drifter every X milliseconds
 
-    console.log("init ye wow")
+    console.log("init ye wow aa")
 })

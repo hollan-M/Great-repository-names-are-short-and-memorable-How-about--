@@ -144,6 +144,7 @@ trigger.addEventListener("click", (e) => {
             }
             else {
                 console.log("SERVER CLICK");
+                window.open("", "_blank");
             }
         });
     });
@@ -181,9 +182,10 @@ trigger.addEventListener("click", (e) => {
             }
             else {
                 console.log("SERVER CLICK");
+                window.open("", "_blank");
             }
         });
     });
     setInterval(create_drift_element, 100); // will run this function once every X milliseconds, meaning it'll create a new drifter every X milliseconds
-    console.log("init ye wow");
+    console.log("init ye wow aa");
 });
