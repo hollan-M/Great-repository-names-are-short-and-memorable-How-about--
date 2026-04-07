@@ -17,6 +17,9 @@ body.appendChild(main_div);
 let box_div = document.createElement("div");
 body.appendChild(box_div);
 
+let text_div = document.createElement("div");
+body.appendChild(text_div);
+
 let quote_div: any = document.getElementById("quotes");
 
 let drift_container = document.getElementById("drift_container")!;
@@ -213,6 +216,47 @@ trigger.addEventListener("click", (e) => {
             } else {
                 console.log("SERVER CLICK");
                 window.open("https://hollan-m.github.io/Great-repository-names-are-short-and-memorable-How-about--/boxes/boxes.html", "_blank");
+            }
+        })
+    })
+
+    create_text("TEXT STUFF!! Blank text demo!", text_div, (parent: HTMLDivElement, text: HTMLAnchorElement[])=>{ 
+        let div_parent = parent.parentElement!;
+        
+        parent.style.display = "flex";
+        parent.style.alignItems = "center";
+        parent.style.position = "absolute";
+        parent.style.transform = "translate(875px, 395px)";
+        parent.style.border = "5px solid black";
+        parent.style.borderRadius = "25px";
+        parent.style.height = "75px";
+        parent.style.width = "350px";
+        parent.style.justifyContent = "center";
+        parent.style.boxShadow = "black 0px 10px 15px";
+        div_parent.id = "texts_parent_div";
+        parent.id = "texts_div";
+    
+        let inc_wait = 0;
+    
+        for (let index = 0; index < text.length; index++) {
+            inc_wait += 25;
+            let element: HTMLAnchorElement = text[index]!;
+            element.style.boxShadow = "black 0px 10px 15px";
+            element.style.userSelect = "none";
+            window.setTimeout(()=>{
+                element.style.position = "relative";
+                element.style.animation = "float2 3s cubic-bezier(0.83, 0, 0.17, 1) infinite";
+            }, inc_wait)
+        }
+        // handle clicks 
+        parent.addEventListener("click", (e) => {
+            console.log(window.location)
+            if (window.location.href == "file:///Users/hollanm9/Documents/GitHub/Great-repository-names-are-short-and-memorable-How-about--/index.html") {
+                console.log("LOCAL CLICK, REDIRECTING...");
+                window.open("file:////Users/hollanm9/Documents/GitHub/Great-repository-names-are-short-and-memorable-How-about--/text/text.html", "_blank")
+            } else {
+                console.log("SERVER CLICK");
+                window.open("https://hollan-m.github.io/Great-repository-names-are-short-and-memorable-How-about--/text/text.html", "_blank");
             }
         })
     })
