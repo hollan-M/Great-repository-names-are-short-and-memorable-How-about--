@@ -66,10 +66,14 @@ window.setTimeout(()=>{
                 element.style.display = "inline-block";
                 element.style.position = "relative";
                 element.style.animation = "popin 1s cubic-bezier(0.45, 0, 0.55, 1) 1 forwards"
+                element.style.fontFamily = "Bitcount Grid Double";
+                element.style.color = "rgb(255, 0, 125)"
             }, inc_wait)
         }
     });
-    create_text(`      •  "Son im crine 😭" - Written on the board`, quotes_div as HTMLDivElement, (parent: HTMLDivElement, text: HTMLSpanElement[])=>{
+    // element creation
+    let randomFont = [""]
+    create_text(`      •  "Son im crine 😭" - WAS written on the board`, quotes_div as HTMLDivElement, (parent: HTMLDivElement, text: HTMLSpanElement[])=>{
         let inc_wait = 0;
         for (const element of text) {
             element.style.userSelect = "none";
@@ -79,10 +83,12 @@ window.setTimeout(()=>{
                 element.style.display = "inline-block";
                 element.style.position = "relative";
                 element.style.animation = "popin 1s cubic-bezier(0.45, 0, 0.55, 1) 1 forwards"
+                element.style.fontFamily = "Tangerine";
+                element.style.color = "rgb(255, 0, 0)"
             }, inc_wait)
         }
     });
-    create_text(`      •  "Catholic school should see me now." - Astrid`, quotes_div as HTMLDivElement, (parent: HTMLDivElement, text: HTMLSpanElement[])=>{
+    create_text(`      •  "Catholic school should see me now." - Astrid, considerably more "woke" now.`, quotes_div as HTMLDivElement, (parent: HTMLDivElement, text: HTMLSpanElement[])=>{
         let inc_wait = 0;
         for (const element of text) {
             element.style.userSelect = "none";
@@ -92,10 +98,12 @@ window.setTimeout(()=>{
                 element.style.display = "inline-block";
                 element.style.position = "relative";
                 element.style.animation = "popin 1s cubic-bezier(0.45, 0, 0.55, 1) 1 forwards"
+                element.style.fontFamily = "Saira Stencil";
+                element.style.color = "rgb(0, 255, 0)"
             }, inc_wait)
         }
     });
-    create_text(`      •  "Despite everything, you're still you." - Toby T. Fox`, quotes_div as HTMLDivElement, (parent: HTMLDivElement, text: HTMLSpanElement[])=>{
+    create_text(`      •  "Despite everything, it's still you." - Toby T. Fox`, quotes_div as HTMLDivElement, (parent: HTMLDivElement, text: HTMLSpanElement[])=>{
         let inc_wait = 0;
         for (const element of text) {
     
@@ -106,6 +114,8 @@ window.setTimeout(()=>{
                 element.style.display = "inline-block";
                 element.style.position = "relative";
                 element.style.animation = "popin 1s cubic-bezier(0.45, 0, 0.55, 1) 1 forwards"
+                element.style.fontFamily = "Playwrite IE";
+                element.style.color = "rgb(125, 125, 0)"
             }, inc_wait)
         }
     });
