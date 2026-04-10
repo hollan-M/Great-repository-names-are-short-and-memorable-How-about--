@@ -6,6 +6,47 @@
     right: 50%;
     position: absolute;
     height: 215px;
+    background: #ff0000;
+    background: linear-gradient(180deg,rgba(255, 0, 0, 1) 0%, rgba(0, 128, 0, 1) 100%);
+    z-index: 4;
+}
+#box2 {
+    border: 2px solid green;
+    border-radius: 25px;
+    width: 190px;
+    text-align: center;
+    right: 51%;
+    position: absolute;
+    height: 115px;
+    background: #008000;
+    background: linear-gradient(180deg,rgba(0, 128, 0, 1) 0%, rgba(0, 0, 255, 1) 100%);
+    top: 39%;
+    z-index: -1;
+}
+#box3 {
+    border: 2px solid blue;
+    border-radius: 25px;
+    width: 171px;
+    text-align: center;
+    right: 50%;
+    position: absolute;
+    height: 116px;
+    background: #0000FF;
+    background: linear-gradient(180deg,rgba(0, 0, 255, 1) 0%, rgba(240, 255, 255, 1) 100%);
+    top: 53%;
+    z-index: -2;
+}
+#box4 {
+    border: 2px solid #5f8282;
+    border-radius: 25px;
+    width: 151px;
+    text-align: center;
+    right: 47%;
+    position: absolute;
+    height: 81px;
+    background-color: azure;
+    top: 70%;
+    z-index: -3;
 }
 
 @keyframes boxtext1 {
