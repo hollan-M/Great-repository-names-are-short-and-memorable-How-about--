@@ -25,6 +25,7 @@ function create_text(text: string, parent: HTMLElement, callback: (parent_div: H
 //     quote_box.style.animation = "box_opener 2s cubic-bezier(0.45, 0, 0.55, 1) 1 forwards"
 // }, 1500)
 
+
 // LOL I stole from my own website but thats ok 
 // begin functions for the bg
 function get_random_coords() {
