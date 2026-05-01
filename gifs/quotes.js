@@ -17,10 +17,10 @@ function create_text(text, parent, callback) {
         callback(parent_div, text_array);
     }
 }
-window.setTimeout(() => {
-    let quote_box = document.getElementById("quotes_container");
-    quote_box.style.animation = "box_opener 2s cubic-bezier(0.45, 0, 0.55, 1) 1 forwards";
-}, 1500);
+// window.setTimeout(() => {
+//     let quote_box = document.getElementById("quotes_container");
+//     quote_box.style.animation = "box_opener 2s cubic-bezier(0.45, 0, 0.55, 1) 1 forwards";
+// }, 1500);
 // LOL I stole from my own website but thats ok 
 // begin functions for the bg
 function get_random_coords() {
