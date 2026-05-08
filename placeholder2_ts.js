@@ -16,6 +16,12 @@ body.appendChild(box_div);
 let text_div = document.createElement("div");
 body.appendChild(text_div);
 let quote_div = document.getElementById("quotes");
+let video_div = document.createElement("div");
+body.appendChild(video_div);
+video_div.id = "video_div";
+let seahorse_div = document.createElement("div");
+body.appendChild(seahorse_div);
+seahorse_div.id = "seahorse_div";
 let drift_container = document.getElementById("drift_container");
 let animDuration = 5;
 // site-related functions
@@ -261,6 +267,83 @@ trigger.addEventListener("click", (e) => {
             else {
                 console.log("SERVER CLICK");
                 window.open("https://hollan-m.github.io/Great-repository-names-are-short-and-memorable-How-about--/gifs/gifs.html", "_blank");
+            }
+        });
+    });
+    create_text("VIDEO STUFF!!", video_div, (parent, text) => {
+        let div_parent = parent.parentElement;
+        parent.style.display = "flex";
+        parent.style.alignItems = "center";
+        parent.style.position = "absolute";
+        parent.style.transform = "translate(875px, 595px)";
+        parent.style.border = "5px solid black";
+        parent.style.borderRadius = "25px";
+        parent.style.height = "75px";
+        parent.style.width = "350px";
+        parent.style.justifyContent = "center";
+        parent.style.boxShadow = "black 0px 10px 15px";
+        div_parent.id = "texts_parent_div";
+        parent.id = "text_stuff";
+        let inc_wait = 0;
+        for (let index = 0; index < text.length; index++) {
+            inc_wait += 25;
+            let element = text[index];
+            element.style.boxShadow = "black 0px 10px 15px";
+            element.style.userSelect = "none";
+            window.setTimeout(() => {
+                element.style.position = "relative";
+                element.style.animation = "float4 2.5s cubic-bezier(0.83, 0, 0.17, 1) infinite";
+            }, inc_wait);
+        }
+        // handle clicks 
+        parent.addEventListener("click", (e) => {
+            console.log(window.location);
+            if (window.location.href == "file:///Users/hollanm9/Documents/GitHub/Great-repository-names-are-short-and-memorable-How-about--/index.html") {
+                console.log("LOCAL CLICK, REDIRECTING...");
+                window.open("file:////Users/hollanm9/Documents/GitHub/Great-repository-names-are-short-and-memorable-How-about--/videos/index.html", "_blank");
+            }
+            else {
+                console.log("SERVER CLICK");
+                window.open("https://hollan-m.github.io/Great-repository-names-are-short-and-memorable-How-about--/videos/index.html", "_blank");
+            }
+        });
+    });
+    create_text("SEAHORSE SERENITY", seahorse_div, (parent, text) => {
+        let div_parent = parent.parentElement;
+        parent.style.display = "flex";
+        parent.style.alignItems = "center";
+        parent.style.position = "absolute";
+        parent.style.transform = "translate(875px, 695px)";
+        parent.style.border = "5px solid black";
+        parent.style.borderRadius = "25px";
+        parent.style.height = "75px";
+        parent.style.width = "350px";
+        parent.style.justifyContent = "center";
+        parent.style.boxShadow = "#325ddd 0px 10px 15px";
+        parent.style.backgroundColor = "#6a9ecc";
+        div_parent.id = "texts_parent_div";
+        parent.id = "text_stuff";
+        let inc_wait = 0;
+        for (let index = 0; index < text.length; index++) {
+            inc_wait += 25;
+            let element = text[index];
+            element.style.boxShadow = "black 0px 10px 15px";
+            element.style.userSelect = "none";
+            window.setTimeout(() => {
+                element.style.position = "relative";
+                element.style.animation = "float4 2.5s cubic-bezier(0.83, 0, 0.17, 1) infinite";
+            }, inc_wait);
+        }
+        // handle clicks 
+        parent.addEventListener("click", (e) => {
+            console.log(window.location);
+            if (window.location.href == "file:///Users/hollanm9/Documents/GitHub/Great-repository-names-are-short-and-memorable-How-about--/index.html") {
+                console.log("LOCAL CLICK, REDIRECTING...");
+                window.open("file:///Users/hollanm9/Documents/GitHub/seahorse_info/main/main.html", "_blank");
+            }
+            else {
+                console.log("SERVER CLICK");
+                window.open("https://hollan-m.github.io/seahorse_info/main/main.html", "_blank");
             }
         });
     });
